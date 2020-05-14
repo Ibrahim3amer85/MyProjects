@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C5BC2586-C490-4135-B3DA-E6C4AAE8CF19}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SalesWithLinq</RootNamespace>
+    <AssemblyName>SalesWithLinq</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DevExpress.BonusSkins.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v19.1.Core, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v19.1.Core, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppForms\AppCustomerVendorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\AppCustomerVendorForm.Designer.cs">
+      <DependentUpon>AppCustomerVendorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\AppDrawerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\AppDrawerForm.Designer.cs">
+      <DependentUpon>AppDrawerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\AppMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\AppMainForm.Designer.cs">
+      <DependentUpon>AppMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\AppCompanyInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\AppCompanyInfoForm.Designer.cs">
+      <DependentUpon>AppCompanyInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\AppMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\AppMasterForm.Designer.cs">
+      <DependentUpon>AppMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\AppProductCategoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\AppProductCategoryForm.Designer.cs">
+      <DependentUpon>AppProductCategoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\AppProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\AppProductForm.Designer.cs">
+      <DependentUpon>AppProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\AppStoresForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\AppStoresForm.Designer.cs">
+      <DependentUpon>AppStoresForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\AppStoresListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\AppStoresListForm.Designer.cs">
+      <DependentUpon>AppStoresListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\db.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AppForms\AppCompanyInfoForm.resx">
+      <DependentUpon>AppCompanyInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\AppCustomerVendorForm.resx">
+      <DependentUpon>AppCustomerVendorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\AppDrawerForm.resx">
+      <DependentUpon>AppDrawerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\AppMainForm.resx">
+      <DependentUpon>AppMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\AppMasterForm.resx">
+      <DependentUpon>AppMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\AppProductCategoryForm.resx">
+      <DependentUpon>AppProductCategoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\AppProductForm.resx">
+      <DependentUpon>AppProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\AppStoresForm.resx">
+      <DependentUpon>AppStoresForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\AppStoresListForm.resx">
+      <DependentUpon>AppStoresListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="DAL\db.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>db.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DAL\db.dbml.layout">
+      <DependentUpon>db.dbml</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addfile_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addfile_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chartdatalabels_insidebase.svg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
