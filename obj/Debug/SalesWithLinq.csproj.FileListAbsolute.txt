@@ -98,3 +98,6 @@ C:\Users\Elhoda\source\repos\SalesWithLinq\bin\Debug\DevExpress.BonusSkins.v19.1
 C:\Users\Elhoda\source\repos\SalesWithLinq\obj\Debug\SalesWithLinq.AppForms.AppCustomerVendorForm.resources
 C:\Users\Elhoda\source\repos\SalesWithLinq\obj\Debug\SalesWithLinq.AppForms.AppProductCategoryForm.resources
 C:\Users\Elhoda\source\repos\SalesWithLinq\obj\Debug\SalesWithLinq.AppForms.AppProductForm.resources
+C:\Users\Elhoda\source\repos\SalesWithLinq\obj\Debug\TabFormExample.Form1.resources
+C:\Users\Elhoda\source\repos\SalesWithLinq\obj\Debug\TabFormExample.Test1.resources
+C:\Users\Elhoda\source\repos\SalesWithLinq\obj\Debug\TabFormExample.Test2.resources

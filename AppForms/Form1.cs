@@ -10,46 +10,30 @@ using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
 
-namespace SalesWithLinq.AppForms
+namespace TabFormExample
 {
-    public partial class AppMainForm : DevExpress.XtraBars.TabForm
+    public partial class Form1 : DevExpress.XtraBars.TabForm
     {
         public DevExpress.XtraBars.TabFormControl tabFormControl;
         public DevExpress.XtraBars.TabFormPage tabFormPage;
         public DevExpress.XtraBars.TabFormContentContainer tabFormContentContainer;
-        public AppMainForm()
+        public Form1()
         {
             InitializeComponent();
             accordionControl1.ElementClick += AccordionControl1_ElementClick;
         }
 
-        private void AccordionControl1_ElementClick(object sender, DevExpress.XtraBars.Navigation.ElementClickEventArgs e)
+        private void AccordionControl1_ElementClick(object sender, ElementClickEventArgs e)
         {
             var tag = e.Element.Tag as string;
             if (tag != string.Empty)
             {
                 OpenFormByName(tag);
             }
-        }
 
-        public  void OpenFormByName(string name)
+        }
+        public void OpenFormByName(string name)
         {
-            //Form frm = null;
-            //if (name == "AppCustomerForm")
-            //{
-            //    frm = new AppCustomerVendorForm(true);
-            //}
-            //if (name == "AppVendorForm")
-            //{
-            //    frm = new AppCustomerVendorForm(false);
-            //}
-            //if (frm != null)
-            //{
-            //    frm.Show();
-            //    return;
-            //}
-            //else
-            //{
             var ins = Assembly.GetExecutingAssembly().GetTypes().FirstOrDefault(x => x.Name == name);
             if (ins != null)
             {
@@ -67,12 +51,11 @@ namespace SalesWithLinq.AppForms
                     //     frm.Show();
                     #endregion
                     frm.FormBorderStyle = FormBorderStyle.None;
-                    HandleTabForm(frm);
+                    HandleTabFrom(frm);
                 }
             }
-            //}
         }
-       private  void HandleTabForm(Form form)
+        private void HandleTabFrom(Form form)
         {
             this.tabFormControl = new DevExpress.XtraBars.TabFormControl();
             this.tabFormContentContainer = new DevExpress.XtraBars.TabFormContentContainer();
@@ -106,5 +89,8 @@ namespace SalesWithLinq.AppForms
             #endregion
             form.Show();
         }
+
+
+
     }
 }

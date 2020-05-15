@@ -117,6 +117,24 @@
     <Compile Include="AppForms\AppStoresListForm.Designer.cs">
       <DependentUpon>AppStoresListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppForms\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Form1.designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Test1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Test1.designer.cs">
+      <DependentUpon>Test1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\Test2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\Test2.designer.cs">
+      <DependentUpon>Test2.cs</DependentUpon>
+    </Compile>
     <Compile Include="DAL\db.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -150,6 +168,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\AppStoresListForm.resx">
       <DependentUpon>AppStoresListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Test1.resx">
+      <DependentUpon>Test1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\Test2.resx">
+      <DependentUpon>Test2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

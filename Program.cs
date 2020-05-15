@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Reflection;
+using TabFormExample;
 
 namespace SalesWithLinq
 {
@@ -20,7 +21,7 @@ namespace SalesWithLinq
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new StoresListForm());
-            Application.Run(new AppMainForm());
+            Application.Run(new Form1());
         }
         
     }
